@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1 (Python 3.12.6 on win32)" generated="2024-10-06T22:40:02.098686" rpa="false" schemaversion="5">
+<suite id="s1" name="100154571-Part2" source="C:\Users\Admin\Downloads\AcceptanceTesting2-1\tests\100154571-part2.robot">
+<test id="s1-t1" name="Invalid Name Input" line="9">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-10-06T22:40:02.641967" level="INFO">Opening browser 'Chrome' to base url 'http://127.0.0.1:5000'.</msg>
+<arg>${URL}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-10-06T22:40:02.641967" elapsed="3.148363"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-10-06T22:40:05.790330" elapsed="0.035905"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-10-06T22:40:05.826235" level="INFO">Opened Browser for Invalid Name Input Test</msg>
+<arg>Opened Browser for Invalid Name Input Test</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-10-06T22:40:05.826235" elapsed="0.000000"/>
+</kw>
+<kw name="Start Game">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-06T22:40:05.828229" level="INFO">Typing text '' into text field 'id=name'.</msg>
+<arg>id=name</arg>
+<arg>${player_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-06T22:40:05.828229" elapsed="0.073802"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-06T22:40:05.902031" level="INFO">Clicking button 'xpath=//button[text()='Start']'.</msg>
+<arg>xpath=//button[text()='Start']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-06T22:40:05.902031" elapsed="0.059841"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-10-06T22:40:05.972842" level="INFO">Current page contains text 'Name cannot be empty. Please enter a valid name.'.</msg>
+<arg>${expected_message}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-10-06T22:40:05.961872" elapsed="0.011968"/>
+</kw>
+<arg>${EMPTY}</arg>
+<arg>Name cannot be empty. Please enter a valid name.</arg>
+<status status="PASS" start="2024-10-06T22:40:05.827231" elapsed="0.146609"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-10-06T22:40:05.973840" elapsed="2.113953"/>
+</kw>
+<doc>Test invalid player name inputs and verify the game handles them correctly.</doc>
+<status status="PASS" start="2024-10-06T22:40:02.640968" elapsed="5.447833"/>
+</test>
+<test id="s1-t2" name="Invalid Difficulty Selection" line="20">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-10-06T22:40:08.094898" level="INFO">Opening browser 'Chrome' to base url 'http://127.0.0.1:5000'.</msg>
+<arg>${URL}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-10-06T22:40:08.093898" elapsed="3.133469"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-10-06T22:40:11.227367" elapsed="0.022939"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-10-06T22:40:11.250306" level="INFO">Opened Browser for Invalid Difficulty Selection Test</msg>
+<arg>Opened Browser for Invalid Difficulty Selection Test</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-10-06T22:40:11.250306" elapsed="0.000000"/>
+</kw>
+<kw name="Start Game">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-06T22:40:11.252300" level="INFO">Typing text 'MonMon' into text field 'id=name'.</msg>
+<arg>id=name</arg>
+<arg>${player_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-06T22:40:11.252300" elapsed="0.074799"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-06T22:40:11.327099" level="INFO">Clicking button 'xpath=//button[text()='Start']'.</msg>
+<arg>xpath=//button[text()='Start']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-06T22:40:11.327099" elapsed="0.060838"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-10-06T22:40:11.399819" level="INFO">Current page contains text 'Choose Difficulty'.</msg>
+<arg>${expected_message}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-10-06T22:40:11.388934" elapsed="0.010885"/>
+</kw>
+<arg>MonMon</arg>
+<arg>Choose Difficulty</arg>
+<status status="PASS" start="2024-10-06T22:40:11.251319" elapsed="0.149524"/>
+</kw>
+<kw name="Proceed Without Difficulty Selection">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-06T22:40:11.400843" level="INFO">Clicking button 'xpath=//button[text()='Submit']'.</msg>
+<arg>xpath=//button[text()='Submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-06T22:40:11.400843" elapsed="0.044558"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-10-06T22:40:11.459339" level="INFO">Current page contains text 'Please select a difficulty level.'.</msg>
+<arg>Please select a difficulty level.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-10-06T22:40:11.445401" elapsed="0.013938"/>
+</kw>
+<status status="PASS" start="2024-10-06T22:40:11.400843" elapsed="0.058496"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-10-06T22:40:11.459339" elapsed="2.102009"/>
+</kw>
+<doc>Test invalid difficulty selection and verify the game displays an error.</doc>
+<status status="PASS" start="2024-10-06T22:40:08.091867" elapsed="5.470488"/>
+</test>
+<test id="s1-t3" name="Invalid Bet Input" line="34">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-10-06T22:40:13.567286" level="INFO">Opening browser 'Chrome' to base url 'http://127.0.0.1:5000'.</msg>
+<arg>${URL}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-10-06T22:40:13.567286" elapsed="3.108919"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-10-06T22:40:16.677202" elapsed="0.023212"/>
+</kw>
+<kw name="Start Game">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-06T22:40:16.700414" level="INFO">Typing text 'MonMon' into text field 'id=name'.</msg>
+<arg>id=name</arg>
+<arg>${player_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-06T22:40:16.700414" elapsed="0.075796"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-06T22:40:16.776210" level="INFO">Clicking button 'xpath=//button[text()='Start']'.</msg>
+<arg>xpath=//button[text()='Start']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-06T22:40:16.776210" elapsed="0.065055"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-10-06T22:40:16.854229" level="INFO">Current page contains text 'Choose Difficulty'.</msg>
+<arg>${expected_message}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-10-06T22:40:16.842261" elapsed="0.011968"/>
+</kw>
+<arg>MonMon</arg>
+<arg>Choose Difficulty</arg>
+<status status="PASS" start="2024-10-06T22:40:16.700414" elapsed="0.153815"/>
+</kw>
+<kw name="Select Difficulty">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-06T22:40:16.855226" level="INFO">Clicking element 'id=easy'.</msg>
+<arg>id=${difficulty}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-06T22:40:16.854229" elapsed="0.032339"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-06T22:40:16.886568" level="INFO">Clicking button 'xpath=//button[text()='Submit']'.</msg>
+<arg>xpath=//button[text()='Submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-06T22:40:16.886568" elapsed="0.043887"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-10-06T22:40:16.947409" level="INFO">Current page contains text 'Place Your Bet'.</msg>
+<arg>${expected_message}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-10-06T22:40:16.930455" elapsed="0.016954"/>
+</kw>
+<arg>easy</arg>
+<arg>Place Your Bet</arg>
+<status status="PASS" start="2024-10-06T22:40:16.854229" elapsed="0.093180"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=bet</arg>
+<arg>10 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-10-06T22:40:16.948406" elapsed="0.015956"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-10-06T22:40:16.964362" level="INFO">The bet input element is visible.</msg>
+<arg>The bet input element is visible.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-10-06T22:40:16.964362" elapsed="0.000000"/>
+</kw>
+<kw name="Place Bet">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-06T22:40:16.965360" level="INFO">Typing text '-10' into text field 'id=bet'.</msg>
+<arg>id=bet</arg>
+<arg>${bet_amount}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-06T22:40:16.965360" elapsed="0.042886"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-06T22:40:17.008246" level="INFO">Clicking button 'xpath=//button[text()='Place Bet']'.</msg>
+<arg>xpath=//button[text()='Place Bet']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-06T22:40:17.008246" elapsed="0.042791"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-10-06T22:40:17.064003" level="INFO">Current page contains text 'Invalid bet amount. Enter a value between 1 and 100.'.</msg>
+<arg>${expected_message}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-10-06T22:40:17.051037" elapsed="0.012966"/>
+</kw>
+<arg>-10</arg>
+<arg>Invalid bet amount. Enter a value between 1 and 100.</arg>
+<status status="PASS" start="2024-10-06T22:40:16.964362" elapsed="0.099641"/>
+</kw>
+<kw name="Place Bet">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-06T22:40:17.065001" level="INFO">Typing text '0' into text field 'id=bet'.</msg>
+<arg>id=bet</arg>
+<arg>${bet_amount}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-06T22:40:17.065001" elapsed="0.041733"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-06T22:40:17.106734" level="INFO">Clicking button 'xpath=//button[text()='Place Bet']'.</msg>
+<arg>xpath=//button[text()='Place Bet']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-06T22:40:17.106734" elapsed="0.042950"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-10-06T22:40:17.156665" level="INFO">Current page contains text 'Invalid bet amount. Enter a value between 1 and 100.'.</msg>
+<arg>${expected_message}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-10-06T22:40:17.149684" elapsed="0.006981"/>
+</kw>
+<arg>0</arg>
+<arg>Invalid bet amount. Enter a value between 1 and 100.</arg>
+<status status="PASS" start="2024-10-06T22:40:17.065001" elapsed="0.091664"/>
+</kw>
+<kw name="Place Bet">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-06T22:40:17.157663" level="INFO">Typing text '1000' into text field 'id=bet'.</msg>
+<arg>id=bet</arg>
+<arg>${bet_amount}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-06T22:40:17.157663" elapsed="0.041140"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-06T22:40:17.199800" level="INFO">Clicking button 'xpath=//button[text()='Place Bet']'.</msg>
+<arg>xpath=//button[text()='Place Bet']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-06T22:40:17.199800" elapsed="0.032205"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-10-06T22:40:17.242470" level="INFO">Current page contains text 'Invalid bet amount. Enter a value between 1 and 100.'.</msg>
+<arg>${expected_message}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-10-06T22:40:17.232005" elapsed="0.010465"/>
+</kw>
+<arg>1000</arg>
+<arg>Invalid bet amount. Enter a value between 1 and 100.</arg>
+<status status="PASS" start="2024-10-06T22:40:17.156665" elapsed="0.085805"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-10-06T22:40:17.242470" elapsed="2.121295"/>
+</kw>
+<doc>Test invalid bet inputs and verify the game displays appropriate error messages.</doc>
+<status status="PASS" start="2024-10-06T22:40:13.565252" elapsed="5.799478"/>
+</test>
+<test id="s1-t4" name="Invalid Guess Input" line="61">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-10-06T22:40:19.369754" level="INFO">Opening browser 'Chrome' to base url 'http://127.0.0.1:5000'.</msg>
+<arg>${URL}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-10-06T22:40:19.368756" elapsed="3.085429"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-10-06T22:40:22.455194" elapsed="0.027913"/>
+</kw>
+<kw name="Start Game">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-06T22:40:22.484105" level="INFO">Typing text 'MonMon' into text field 'id=name'.</msg>
+<arg>id=name</arg>
+<arg>${player_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-06T22:40:22.484105" elapsed="0.068816"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-06T22:40:22.553919" level="INFO">Clicking button 'xpath=//button[text()='Start']'.</msg>
+<arg>xpath=//button[text()='Start']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-06T22:40:22.553919" elapsed="0.066820"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-10-06T22:40:22.632707" level="INFO">Current page contains text 'Choose Difficulty'.</msg>
+<arg>${expected_message}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-10-06T22:40:22.620739" elapsed="0.011968"/>
+</kw>
+<arg>MonMon</arg>
+<arg>Choose Difficulty</arg>
+<status status="PASS" start="2024-10-06T22:40:22.483107" elapsed="0.149600"/>
+</kw>
+<kw name="Select Difficulty">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-06T22:40:22.634703" level="INFO">Clicking element 'id=easy'.</msg>
+<arg>id=${difficulty}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-06T22:40:22.633706" elapsed="0.033315"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-06T22:40:22.668019" level="INFO">Clicking button 'xpath=//button[text()='Submit']'.</msg>
+<arg>xpath=//button[text()='Submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-06T22:40:22.667021" elapsed="0.044738"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-10-06T22:40:22.729711" level="INFO">Current page contains text 'Place Your Bet'.</msg>
+<arg>${expected_message}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-10-06T22:40:22.712756" elapsed="0.016955"/>
+</kw>
+<arg>easy</arg>
+<arg>Place Your Bet</arg>
+<status status="PASS" start="2024-10-06T22:40:22.633706" elapsed="0.096005"/>
+</kw>
+<kw name="Place Bet">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-06T22:40:22.730708" level="INFO">Typing text '10' into text field 'id=bet'.</msg>
+<arg>id=bet</arg>
+<arg>${bet_amount}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-06T22:40:22.729711" elapsed="0.047106"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-06T22:40:22.777814" level="INFO">Clicking button 'xpath=//button[text()='Place Bet']'.</msg>
+<arg>xpath=//button[text()='Place Bet']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-06T22:40:22.776817" elapsed="0.051375"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-10-06T22:40:22.844148" level="INFO">Current page contains text 'Guess the Number'.</msg>
+<arg>${expected_message}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-10-06T22:40:22.828192" elapsed="0.015956"/>
+</kw>
+<arg>10</arg>
+<arg>Guess the Number</arg>
+<status status="PASS" start="2024-10-06T22:40:22.729711" elapsed="0.114437"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=guess</arg>
+<arg>10 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-10-06T22:40:22.845146" elapsed="0.015010"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-10-06T22:40:22.861153" level="INFO">The guess input element is visible.</msg>
+<arg>The guess input element is visible.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-10-06T22:40:22.861153" elapsed="0.000000"/>
+</kw>
+<kw name="Place Guess">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-06T22:40:22.861153" level="INFO">Typing text '105' into text field 'id=guess'.</msg>
+<arg>id=guess</arg>
+<arg>${guess_amount}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-06T22:40:22.861153" elapsed="0.042529"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-06T22:40:22.903682" level="INFO">Clicking button 'xpath=//button[text()='Submit Guess']'.</msg>
+<arg>xpath=//button[text()='Submit Guess']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-06T22:40:22.903682" elapsed="0.047827"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-10-06T22:40:22.961444" level="INFO">Current page contains text 'Invalid guess. Please guess a number between 1 and 100.'.</msg>
+<arg>${expected_message}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-10-06T22:40:22.951509" elapsed="0.009935"/>
+</kw>
+<arg>105</arg>
+<arg>Invalid guess. Please guess a number between 1 and 100.</arg>
+<status status="PASS" start="2024-10-06T22:40:22.861153" elapsed="0.100291"/>
+</kw>
+<kw name="Place Guess">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-06T22:40:22.962443" level="INFO">Typing text '-105' into text field 'id=guess'.</msg>
+<arg>id=guess</arg>
+<arg>${guess_amount}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-06T22:40:22.961444" elapsed="0.045287"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-06T22:40:23.006731" level="INFO">Clicking button 'xpath=//button[text()='Submit Guess']'.</msg>
+<arg>xpath=//button[text()='Submit Guess']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-06T22:40:23.006731" elapsed="0.033963"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-10-06T22:40:23.050667" level="INFO">Current page contains text 'Invalid guess. Please guess a number between 1 and 100.'.</msg>
+<arg>${expected_message}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-10-06T22:40:23.040694" elapsed="0.009973"/>
+</kw>
+<arg>-105</arg>
+<arg>Invalid guess. Please guess a number between 1 and 100.</arg>
+<status status="PASS" start="2024-10-06T22:40:22.961444" elapsed="0.090245"/>
+</kw>
+<kw name="Place Guess">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-06T22:40:23.051689" level="INFO">Typing text 'one' into text field 'id=guess'.</msg>
+<arg>id=guess</arg>
+<arg>${guess_amount}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-06T22:40:23.051689" elapsed="0.043858"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-06T22:40:23.095547" level="INFO">Clicking button 'xpath=//button[text()='Submit Guess']'.</msg>
+<arg>xpath=//button[text()='Submit Guess']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-06T22:40:23.095547" elapsed="0.037357"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-10-06T22:40:23.141487" level="INFO">Current page contains text 'Invalid guess. Please guess a number between 1 and 100.'.</msg>
+<arg>${expected_message}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-10-06T22:40:23.133926" elapsed="0.007561"/>
+</kw>
+<arg>one</arg>
+<arg>Invalid guess. Please guess a number between 1 and 100.</arg>
+<status status="PASS" start="2024-10-06T22:40:23.051689" elapsed="0.089798"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-10-06T22:40:23.141487" elapsed="2.119252"/>
+</kw>
+<doc>Test invalid guess inputs and verify the game handles them correctly.</doc>
+<status status="PASS" start="2024-10-06T22:40:19.367722" elapsed="5.893017"/>
+</test>
+<status status="PASS" start="2024-10-06T22:40:02.100709" elapsed="23.161107"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="4" fail="0" skip="0" id="s1" name="100154571-Part2">100154571-Part2</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-10-06T22:40:02.296240" level="WARN">Error in file 'C:\Users\Admin\Downloads\AcceptanceTesting2-1\tests\helpers.robot' on line 46: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+</errors>
+</robot>
